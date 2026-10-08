@@ -42,11 +42,31 @@ Los tres proyectos actuales (análisis de fútbol, rastreo de asteroides y monit
 
 
 ## 6. Restricciones
-- **Presupuesto máximo:** $0 MXN para licencias de software (se exige aprovechar tecnologías Open Source y *Free Tiers* en la nube).
-- **Plazo:** 30 de noviembre de 2026.
-- **Costo de operación mensual máximo:** $0 MXN
-- **Seguridad y privacidad:** Las credenciales (API keys), tokens y contraseñas de bases de datos están estrictamente prohibidas en el control de versiones. Todo debe manejarse mediante variables de entorno seguras.
-- **Quien lo va a usar:** Ingenieros de datos, analistas y desarrolladores backend con perfil técnico intermedio-avanzado.
+- **Presupuesto máximo:** Costo operativo unificado enfocado en el modelo de pago por uso (Serverless) de AWS.
+- **Plazo:** 10 semanas para refactorizar los 3 ecosistemas y estabilizar la nueva arquitectura en producción.
+- **Costo de operación:** 
+1 Arquitecto Cloud (AWS): $75,000 MXN / mes (Reemplazará EC2 por Lambda/EventBridge).
+
+
+2 Data Engineers (PySpark): $100,000 MXN / mes en total (Unificarán los particionamientos a year=month= y crearán las reglas de Data Quality para desviar fallos).
+
+
+- Project Manager: $45,000 MXN / mes.
+Costo de producción (talento): $550,000 MXN
+
+- Argumento de Venta (El Retorno de Inversión para el Cliente): Al unificar la arquitectura, el cliente ahorrará mes con mes al eliminar la instancia unam-2026-ingenieriadedatos-grupo6 y optimizar el escaneo de Amazon Athena en el proyecto de fútbol (al refinar las particiones). El costo operativo unificado en la nube para todo el consorcio caerá drásticamente.
+
+- Precio Total para el Cliente:
+
+Costo Base: $550,000 MXN
+
+Margen Comercial (45% para la consultora): $450,000 MXN
+**TOTAL A COBRAR: $1,000,000 MXN + IVA**
+
+
+- **Seguridad y privacidad:** Aislamiento estricto de accesos. El rol que procesa los KPIs de fútbol (como efectividad y goles) no debe tener visibilidad sobre las señales de STRONG BUY de criptomonedas ni sobre la energía de megatones simulada en Defensa Planetaria.
+- **Quien lo va a usar:** Analistas de datos, científicos espaciales y operadores financieros mediante las vistas estructuradas en Amazon Athena.
+
 
 
 ## 7. Qué esperamos recibir
