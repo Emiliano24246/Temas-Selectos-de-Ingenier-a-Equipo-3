@@ -44,11 +44,12 @@ Los tres proyectos actuales (análisis de fútbol, rastreo de asteroides y monit
 ## 6. Restricciones
 - **Presupuesto máximo:** Costo operativo unificado enfocado en el modelo de pago por uso (Serverless) de AWS.
 - **Plazo:** 10 semanas para refactorizar los 3 ecosistemas y estabilizar la nueva arquitectura en producción.
-- **Costo de operación:** 
-1 Arquitecto Cloud (AWS): $75,000 MXN / mes (Reemplazará EC2 por Lambda/EventBridge).
+- **Costo de operación:**
+  
+1. Arquitecto Cloud (AWS): $75,000 MXN / mes (Reemplazará EC2 por Lambda/EventBridge).
 
 
-2 Data Engineers (PySpark): $100,000 MXN / mes en total (Unificarán los particionamientos a year=month= y crearán las reglas de Data Quality para desviar fallos).
+2. Data Engineers (PySpark): $100,000 MXN / mes en total (Unificarán los particionamientos a year=month= y crearán las reglas de Data Quality para desviar fallos).
 
 
 - Project Manager: $45,000 MXN / mes.
