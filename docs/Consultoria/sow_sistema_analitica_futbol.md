@@ -5,9 +5,10 @@
 **Respuesta al RFP del:** 13/10/2026
 **Versión:** 1.0
 **Equipo:** 
-* Tristan Qesen Sanchez Mayen - Lead Data Engineer
-* Amir Cuevas - Data Engineer
-* Darinka - Data Engineer
+* Tristan Qesen Sanchez Mayen
+* Sandoval Hernandez Darinka
+* Salgado Cruz Roman Emiliano
+* Tapia Ledesma Angel Hazel
 
 ## 1. Resumen ejecutivo
 Comprendemos que su infraestructura actual basada en EC2 es costosa e ineficiente, limitando la toma de decisiones tácticas. Migraremos la ingesta de la API-Football hacia una arquitectura Serverless, optimizando la capa analítica con particionamiento Parquet para que el cuerpo técnico consulte KPIs al instante. Este proyecto de 10 semanas asegura una modernización total por una inversión de $455,310 MXN, sin rebasar su tope presupuestal.

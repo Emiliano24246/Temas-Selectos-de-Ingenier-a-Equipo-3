@@ -5,9 +5,10 @@
 **Respuesta al RFP del:** 13/10/2026
 **Versión:** 1.0
 **Equipo:** 
-* Tristan Qesen Sanchez Mayen - Lead Data Engineer
-* Amir Cuevas - Data Engineer
-* Darinka - Data Engineer
+* Tristan Qesen Sanchez Mayen
+* Sandoval Hernandez Darinka
+* Salgado Cruz Roman Emiliano
+* Tapia Ledesma Angel Hazel
 
 ## 1. Resumen ejecutivo
 Entendemos que requieren modernizar el procesamiento de datos astronómicos de asteroides provenientes de la API de la NASA para alimentar las pantallas de sus museos de forma automática. Entregaremos un pipeline serverless en AWS (Lambda, Glue, Athena) que procesará la información en formato Parquet y calculará el "Risk Score". El proyecto se ejecutará en 10 semanas con un costo total estimado de $426,250 MXN, manteniéndonos por debajo de su presupuesto máximo.

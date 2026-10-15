@@ -5,9 +5,10 @@
 **Respuesta al RFP del:** 13/10/2026
 **Versión:** 1.0
 **Equipo:** 
-* Tristan Qesen Sanchez Mayen - Lead Data Engineer
-* Amir Cuevas - Data Engineer
-* Darinka - Data Engineer
+* Tristan Qesen Sanchez Mayen
+* Sandoval Hernandez Darinka
+* Salgado Cruz Roman Emiliano
+* Tapia Ledesma Angel Hazel
 
 ## 1. Resumen ejecutivo
 Comprendemos la urgencia de estabilizar su pipeline de datos de Binance para evitar riesgos financieros. Sustituiremos su infraestructura inestable por una arquitectura serverless elástica (AWS Lambda, Glue) que calcule con precisión y sin interrupciones los indicadores RSI, Bollinger y MACD. El proyecto se liberará en 10 semanas con una inversión de $455,310 MXN.
