@@ -3,7 +3,7 @@
 **Cliente: Asteroid DataEngineering Project**
 **Contacto: Dirección General de Exposiciones**
 
-**Equipo consultor: [Nombre de tu Consultoría / Equipo]**
+**Equipo consultor: Consultoría en Ingeniería de Datos TeamThree**
 **Fecha de publicación:** [13/10/2026]
 
 ## 1. Quiénes somos
