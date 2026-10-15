@@ -5,23 +5,23 @@
 **Respuesta al RFP del:** 13/10/2026
 **Versión:** 1.0
 **Equipo:** 
-* Tristan Qesen Sanchez Mayen
-* Sandoval Hernandez Darinka
-* Salgado Cruz Roman Emiliano
-* Tapia Ledesma Angel Hazel
+- Tristan Qesen Sanchez Mayen
+- Sandoval Hernandez Darinka
+- Salgado Cruz Roman Emiliano
+- Tapia Ledesma Angel Hazel
 
 ## 1. Resumen ejecutivo
 Entendemos que requieren modernizar el procesamiento de datos astronómicos de asteroides provenientes de la API de la NASA para alimentar las pantallas de sus museos de forma automática. Entregaremos un pipeline serverless en AWS (Lambda, Glue, Athena) que procesará la información en formato Parquet y calculará el "Risk Score". El proyecto se ejecutará en 10 semanas con un costo total estimado de $426,250 MXN, manteniéndonos por debajo de su presupuesto máximo.
 
 ## 2. Alcance
 **Dentro de alcance:**
-* Extracción automatizada diaria de la API NeoWs de la NASA.
-* Construcción de arquitectura Medallón (Bronze, Silver, Gold) en Amazon S3.
-* Implementación de reglas de calidad de datos y cuarentena en S3.
-* Modelado en Amazon Athena para consulta de métricas de riesgo.
+- Extracción automatizada diaria de la API NeoWs de la NASA.
+- Construcción de arquitectura Medallón (Bronze, Silver, Gold) en Amazon S3.
+- Implementación de reglas de calidad de datos y cuarentena en S3.
+- Modelado en Amazon Athena para consulta de métricas de riesgo.
 **Fuera de alcance:**
-* Desarrollo de la interfaz gráfica de las pantallas del museo (razón: nuestro enfoque es puramente ingeniería de datos en backend).
-* Uso de servidores EC2 (razón: buscamos eliminar costos por inactividad).
+- Desarrollo de la interfaz gráfica de las pantallas del museo (razón: nuestro enfoque es puramente ingeniería de datos en backend).
+- Uso de servidores EC2 (razón: buscamos eliminar costos por inactividad).
 
 ## 3. Entregables y criterios de aceptación
 | # | Entregable | Criterio de aceptación | Hito |
@@ -51,14 +51,15 @@ Se utilizará una arquitectura orientada a eventos. AWS EventBridge disparará d
 | 5 Cierre | Documentación y entrega | Manual técnico entregado y firmado | Sem 10 | 120 |
 
 ## 7. Equipo y responsabilidades
-* **Tristan Qesen Sanchez Mayen:** Lead Data Engineer. Responsable del diseño arquitectónico en AWS, estandarización y configuración de IAM. Reporta a la Dirección del Museo.
-* **Amir Cuevas:** Data Engineer. Responsable del desarrollo de las funciones Lambda y consultas en Athena. Reporta al Lead Data Engineer.
-* **Darinka:** Data Engineer. Responsable de los scripts de transformación en AWS Glue (PySpark) y calidad de datos. Reporta al Lead Data Engineer.
+- **Tristan Qesen Sanchez Mayen:** Lead Data Engineer. Responsable del diseño arquitectónico en AWS, estandarización y configuración de IAM. Reporta a la Dirección del Museo.
+- **Sandoval Hernandez Darinka:** Data Engineer. Responsable de los scripts de transformación en AWS Glue (PySpark) y calidad de datos. Reporta al Lead Data Engineer.
+- **Salgado Cruz Roman Emiliano:** Data Engineer. Responsable del desarrollo de las funciones Lambda y consultas en Athena. Reporta al Lead Data Engineer.
+- **Tapia Ledesma Angel Hazel:** Data Engineer. Responsable del monitoreo del pipeline, pruebas y validación de las vistas analíticas. Reporta al Lead Data Engineer.
 
 ## 8. Supuestos y dependencias del cliente
-* El cliente proporcionará la llave API válida de la API NeoWs de la NASA desde el día 1.
-* El equipo técnico del cliente (desarrolladores de las pantallas) estará disponible en el Hito 4 para probar la conexión con Amazon Athena.
-* Asumimos que los esquemas del JSON de la NASA no sufrirán cambios estructurales (breaking changes) durante estas 10 semanas.
+- El cliente proporcionará la llave API válida de la API NeoWs de la NASA desde el día 1.
+- El equipo técnico del cliente (desarrolladores de las pantallas) estará disponible en el Hito 4 para probar la conexión con Amazon Athena.
+- Asumimos que los esquemas del JSON de la NASA no sufrirán cambios estructurales (breaking changes) durante estas 10 semanas.
 
 ## 9. Riesgos
 | Riesgo | Probabilidad | Impacto | Qué haremos |
@@ -69,12 +70,14 @@ Se utilizará una arquitectura orientada a eventos. AWS EventBridge disparará d
 ## 10. Presupuesto
 | Concepto | Horas | Tarifa MXN/h | Subtotal MXN |
 |---|---|---|---|
-| Lead Data Engineer (Tristan) | 400 | $406.25 | $162,500 |
-| Data Engineer (Amir) | 400 | $281.25 | $112,500 |
-| Data Engineer (Darinka) | 400 | $281.25 | $112,500 |
-| Colchón de imprevistos (5%) | | | $19,375 |
-| Costo estimado de AWS (3 meses) | | | $19,375 |
-| **Total** | **1200** | | **$426,250** |
+| Lead Data Engineer (Tristan) | 400 | $406.25 | $162,500.00 |
+| Data Engineer (Darinka) | 266 | $281.25 | $74,812.50 |
+| Data Engineer (Emiliano) | 267 | $281.25 | $75,093.75 |
+| Data Engineer (Angel) | 267 | $281.25 | $75,093.75 |
+| Colchón de imprevistos (5%) | | | $19,375.00 |
+| Costo estimado de AWS (3 meses) | | | $19,375.00 |
+| **Total** | **1200** | | **$426,250.00** |
+
 *El presupuesto total de $426,250 MXN se mantiene por debajo del límite máximo de $450,000 MXN establecido en el RFP.*
 
 ## 11. Control de cambios y comunicación

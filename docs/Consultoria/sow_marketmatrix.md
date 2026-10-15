@@ -5,23 +5,24 @@
 **Respuesta al RFP del:** 13/10/2026
 **Versión:** 1.0
 **Equipo:** 
-* Tristan Qesen Sanchez Mayen
-* Sandoval Hernandez Darinka
-* Salgado Cruz Roman Emiliano
-* Tapia Ledesma Angel Hazel
+- Tristan Qesen Sanchez Mayen
+- Sandoval Hernandez Darinka
+- Salgado Cruz Roman Emiliano
+- Tapia Ledesma Angel Hazel
 
 ## 1. Resumen ejecutivo
-Comprendemos la urgencia de estabilizar su pipeline de datos de Binance para evitar riesgos financieros. Sustituiremos su infraestructura inestable por una arquitectura serverless elástica (AWS Lambda, Glue) que calcule con precisión y sin interrupciones los indicadores RSI, Bollinger y MACD. El proyecto se liberará en 10 semanas con una inversión de $455,310 MXN.
+Comprendemos la urgencia de estabilizar su pipeline de datos de Binance para evitar riesgos financieros. Sustituiremos su infraestructura inestable por una arquitectura serverless elástica (AWS Lambda, Glue) que calcule con precisión y sin interrupciones los indicadores RSI, Bollinger y MACD. El proyecto se liberará en 10 semanas con una inversión de $441,560 MXN.
 
 ## 2. Alcance
 **Dentro de alcance:**
-* Orquestación desatendida mediante AWS Lambda y EventBridge.
-* Desarrollo de scripts PySpark en AWS Glue para cálculo de indicadores.
-* Creación de vistas materializadas de COMPRA/VENTA en Athena.
-* Aislamiento de buckets S3 mediante políticas IAM de mínimo privilegio.
+- Orquestación desatendida mediante AWS Lambda y EventBridge.
+- Desarrollo de scripts PySpark en AWS Glue para cálculo de indicadores.
+- Creación de vistas materializadas de COMPRA/VENTA en Athena.
+- Aislamiento de buckets S3 mediante políticas IAM de mínimo privilegio.
+
 **Fuera de alcance:**
-* Desarrollo o modificación del algoritmo de ejecución de órdenes de trading (razón: nosotros proveemos la señal, el bot de ejecución pertenece al cliente).
-* Aprovisionamiento de servidores virtuales tipo EC2 (razón: se busca evitar costos inactivos).
+- Desarrollo o modificación del algoritmo de ejecución de órdenes de trading (razón: nosotros proveemos la señal, el bot de ejecución pertenece al cliente).
+- Aprovisionamiento de servidores virtuales tipo EC2 (razón: se busca evitar costos inactivos).
 
 ## 3. Entregables y criterios de aceptación
 | # | Entregable | Criterio de aceptación | Hito |
@@ -50,14 +51,15 @@ Desplegaremos una arquitectura de procesamiento Batch de alta frecuencia. Los da
 | 4 Estabilización | Pruebas de estrés | Sistema soporta ráfagas simuladas sin degradarse | Sem 10 | 120 |
 
 ## 7. Equipo y responsabilidades
-* **Tristan Qesen Sanchez Mayen:** Lead Data Engineer. A cargo de la arquitectura, seguridad IAM, y revisión de pull requests. Reporta a la Dirección de Operaciones del cliente.
-* **Amir Cuevas:** Data Engineer. Responsable de orquestación (EventBridge, Lambda) y pruebas de estrés. Reporta a Tristan.
-* **Darinka:** Data Engineer. Responsable de la refactorización lógica de PySpark en AWS Glue para indicadores financieros. Reporta a Tristan.
+- **Tristan Qesen Sanchez Mayen:** Lead Data Engineer. A cargo de la arquitectura, seguridad IAM, y revisión de pull requests. Reporta a la Dirección de Operaciones del cliente.
+- **Sandoval Hernandez Darinka:** Data Engineer. Responsable de la refactorización lógica de PySpark en AWS Glue para indicadores financieros. Reporta al Lead Data Engineer.
+- **Salgado Cruz Roman Emiliano:** Data Engineer. Responsable de orquestación (EventBridge, AWS Lambda) y pruebas de estrés. Reporta al Lead Data Engineer.
+- **Tapia Ledesma Angel Hazel:** Data Engineer. Responsable de la creación de vistas materializadas en Amazon Athena y exposición de señales para la mesa de control. Reporta al Lead Data Engineer.
 
 ## 8. Supuestos y dependencias del cliente
-* El cliente proveerá acceso a los históricos de Klines en CSV para validar la exactitud de los nuevos algoritmos.
-* El equipo de trading del cliente validará matemáticamente los indicadores (RSI, Bollinger, MACD) al cierre del Hito 2.
-* La API de Binance no impondrá bloqueos de IP (Rate Limits) si operamos bajo las credenciales institucionales proveídas.
+- El cliente proveerá acceso a los históricos de Klines en CSV para validar la exactitud de los nuevos algoritmos.
+- El equipo de trading del cliente validará matemáticamente los indicadores (RSI, Bollinger, MACD) al cierre del Hito 2.
+- La API de Binance no impondrá bloqueos de IP (Rate Limits) si operamos bajo las credenciales institucionales proveídas.
 
 ## 9. Riesgos
 | Riesgo | Probabilidad | Impacto | Qué haremos |
@@ -68,12 +70,14 @@ Desplegaremos una arquitectura de procesamiento Batch de alta frecuencia. Los da
 ## 10. Presupuesto
 | Concepto | Horas | Tarifa MXN/h | Subtotal MXN |
 |---|---|---|---|
-| Lead Data Engineer (Tristan) | 400 | $406.25 | $162,500 |
-| Data Engineer (Amir) | 400 | $281.25 | $112,500 |
-| Data Engineer (Darinka) | 400 | $281.25 | $112,500 |
-| Colchón de contingencia financiera (10%)| | | $38,750 |
+| Lead Data Engineer (Tristan) | 300 | $406.25 | $121,875 |
+| Data Engineer (Darinka) | 300 | $281.25 | $84,375 |
+| Data Engineer (Emiliano) | 300 | $281.25 | $84,375 |
+| Data Engineer (Hazel) | 300 | $281.25 | $84,375 |
+| Colchón de contingencia financiera (10%)| | | $37,500 |
 | Costo estimado AWS inicial | | | $29,060 |
-| **Total** | **1200** | | **$455,310** |
+| **Total** | **1200** | | **$441,560** |
+
 *El total propuesto está holgadamente por debajo de su techo financiero de $550,000 MXN.*
 
 ## 11. Control de cambios y comunicación

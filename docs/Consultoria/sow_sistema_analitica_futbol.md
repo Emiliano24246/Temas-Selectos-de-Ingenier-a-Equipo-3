@@ -3,25 +3,25 @@
 **Consultora:** TAD Data Consulting
 **Cliente:** Football Soccer Data Engineering Project
 **Respuesta al RFP del:** 13/10/2026
-**Versión:** 1.0
+**Versión:** 1.1
 **Equipo:** 
-* Tristan Qesen Sanchez Mayen
-* Sandoval Hernandez Darinka
-* Salgado Cruz Roman Emiliano
-* Tapia Ledesma Angel Hazel
+- Tristan Qesen Sanchez Mayen
+- Sandoval Hernandez Darinka
+- Salgado Cruz Roman Emiliano
+- Tapia Ledesma Angel Hazel
 
 ## 1. Resumen ejecutivo
-Comprendemos que su infraestructura actual basada en EC2 es costosa e ineficiente, limitando la toma de decisiones tácticas. Migraremos la ingesta de la API-Football hacia una arquitectura Serverless, optimizando la capa analítica con particionamiento Parquet para que el cuerpo técnico consulte KPIs al instante. Este proyecto de 10 semanas asegura una modernización total por una inversión de $455,310 MXN, sin rebasar su tope presupuestal.
+Comprendemos que su infraestructura actual basada en EC2 es costosa e ineficiente, limitando la toma de decisiones tácticas. Migraremos la ingesta de la API-Football hacia una arquitectura Serverless, optimizando la capa analítica con particionamiento Parquet para que el cuerpo técnico consulte KPIs al instante. Este proyecto de 10 semanas asegura una modernización total por una inversión de $441,560 MXN, sin rebasar su tope presupuestal.
 
 ## 2. Alcance
 **Dentro de alcance:**
-* Eliminación de deuda técnica: Desmantelamiento de la instancia EC2.
-* Refactorización de scripts Python para operar nativamente en AWS Lambda.
-* Implementación de particionamiento optimizado (formato Parquet) en S3 (Silver).
-* Generación de vistas avanzadas (Gold) en Athena (goles, efectividad).
+- Eliminación de deuda técnica: Desmantelamiento de la instancia EC2.
+- Refactorización de scripts Python para operar nativamente en AWS Lambda.
+- Implementación de particionamiento optimizado (formato Parquet) en S3 (Silver).
+- Generación de vistas avanzadas (Gold) en Athena (goles, efectividad).
 **Fuera de alcance:**
-* Software de recolección de video o tracking óptico en la cancha (razón: el alcance se limita al procesamiento de eventos y estadísticas de API-Football).
-* Uso de bases de datos relacionales tradicionales como RDS (razón: mandato estricto de Serverless/Athena).
+- Software de recolección de video o tracking óptico en la cancha (razón: el alcance se limita al procesamiento de eventos y estadísticas de API-Football).
+- Uso de bases de datos relacionales tradicionales como RDS (razón: mandato estricto de Serverless/Athena).
 
 ## 3. Entregables y criterios de aceptación
 | # | Entregable | Criterio de aceptación | Hito |
@@ -50,14 +50,15 @@ Nuestra estrategia FinOps apagará inmediatamente los servidores EC2. Los script
 | 4 Entrega | Documentación FinOps | Análisis de ahorro de costos EC2 vs Serverless entregado | Sem 10 | 120 |
 
 ## 7. Equipo y responsabilidades
-* **Tristan Qesen Sanchez Mayen:** Lead Data Engineer. Diseñador de la arquitectura Serverless, estrategia FinOps y particionamiento. Reporta a Inteligencia Deportiva.
-* **Amir Cuevas:** Data Engineer. Encargado de la refactorización del código Python a Lambda Layers y pruebas unitarias. Reporta a Tristan.
-* **Darinka:** Data Engineer. Encargada del ETL en AWS Glue, conversión a Parquet y modelado de vistas en Athena. Reporta a Tristan.
+- **Tristan Qesen Sanchez Mayen:** Lead Data Engineer. Diseñador de la arquitectura Serverless, estrategia FinOps y particionamiento. Reporta a Inteligencia Deportiva.
+- **Darinka Sandoval Hernandez:** Data Engineer. Encargada del ETL en AWS Glue y conversión a Parquet en la capa Silver. Reporta a Tristan.
+- **Roman Emiliano Salgado Cruz:** Data Engineer. Encargado de la refactorización del código Python a Lambda Layers y contenedorización para la ingesta de datos. Reporta a Tristan.
+- **Angel Hazel Tapia Ledesma:** Data Engineer. Encargado del modelado de vistas analíticas en Athena y pruebas unitarias. Reporta a Tristan.
 
 ## 8. Supuestos y dependencias del cliente
-* El cliente entregará acceso completo a los scripts Python actuales y credenciales de la API-Football.
-* El área de Inteligencia Deportiva validará la lógica de negocio detrás del cálculo de los KPIs tácticos.
-* No existen otros servicios productivos acoplados a la instancia EC2 que se va a eliminar.
+- El cliente entregará acceso completo a los scripts Python actuales y credenciales de la API-Football.
+- El área de Inteligencia Deportiva validará la lógica de negocio detrás del cálculo de los KPIs tácticos.
+- No existen otros servicios productivos acoplados a la instancia EC2 que se va a eliminar.
 
 ## 9. Riesgos
 | Riesgo | Probabilidad | Impacto | Qué haremos |
@@ -68,12 +69,13 @@ Nuestra estrategia FinOps apagará inmediatamente los servidores EC2. Los script
 ## 10. Presupuesto
 | Concepto | Horas | Tarifa MXN/h | Subtotal MXN |
 |---|---|---|---|
-| Lead Data Engineer (Tristan) | 400 | $406.25 | $162,500 |
-| Data Engineer (Amir) | 400 | $281.25 | $112,500 |
-| Data Engineer (Darinka) | 400 | $281.25 | $112,500 |
-| Colchón de imprevistos (10%) | | | $38,750 |
+| Lead Data Engineer (Tristan) | 300 | $406.25 | $121,875 |
+| Data Engineer (Darinka) | 300 | $281.25 | $84,375 |
+| Data Engineer (Emiliano) | 300 | $281.25 | $84,375 |
+| Data Engineer (Angel Hazel) | 300 | $281.25 | $84,375 |
+| Colchón de imprevistos (10%) | | | $37,500 |
 | Costo estimado inicial AWS | | | $29,060 |
-| **Total** | **1200** | | **$455,310** |
+| **Total** | **1200** | | **$441,560** |
 *El presupuesto es altamente competitivo, manteniéndose por debajo de los $550,000 MXN requeridos en el RFP.*
 
 ## 11. Control de cambios y comunicación
